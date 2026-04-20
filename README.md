@@ -39,11 +39,10 @@ Standard 5-field cron expression followed by the message text.
 
 - `--schedule "CRON MESSAGE"` — Add a scheduled message (repeatable)
 - `--timezone TIMEZONE` — Set timezone (default: `Asia/Tokyo`)
-- `SCHEDULER_LOCK_PORT` — Override lock port env var (default: `18923`)
 
-## Single-instance guarantee
+## Multi-session support
 
-Only one instance runs per machine. Additional instances started by subsequent Claude sessions exit silently.
+Each Claude session gets its own scheduler. Define separate MCP entries in `.mcp.json` per session — each entry runs independently with its own cron jobs.
 
 ## How it works
 
