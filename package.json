@@ -1,0 +1,26 @@
+{
+  "name": "scheduled-claude-channel",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A Claude Code custom channel that sends scheduled messages via MCP notifications",
+  "bin": {
+    "scheduled-claude-channel": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test",
+    "dev": "bun src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "@types/node-cron": "^3.0.11"
+  }
+}
